@@ -7,7 +7,7 @@
     android:background="#FFFFFF"
     tools:layout_height="wrap_content">
 
-    <ImageView
+    <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/imageView2"
         android:layout_width="0dp"
         android:layout_height="150dp"
@@ -16,13 +16,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/ic_couple" />
+        app:lottie_fileName="love_hand_sign.json" />
 
     <TextView
         android:id="@+id/titleTextView"
         android:layout_width="0dp"
         android:layout_height="200dp"
-        android:background="#B9FF30D2"
+        android:background="#FABFE4"
         android:gravity="center"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@id/messageTextView"
