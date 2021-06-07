@@ -45,4 +45,12 @@ class Question : AppCompatActivity() {
             startActivity(intent)
         }, 1000)
     }
+    fun callDialog() {
+        val mHandler = Handler(Looper.getMainLooper())
+        mHandler.postDelayed({
+            val intent = Intent(this, PopUpActivity::class.java)
+
+            startActivity(intent)
+        }, 0)
+    }
 }

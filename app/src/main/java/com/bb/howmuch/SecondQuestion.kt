@@ -44,7 +44,7 @@ class SecondQuestion : Fragment() {
         nextBtn = view.findViewById(R.id.nextBtn)
 
         nextBtn.setOnClickListener {
-            (activity as Question?)?.moveToMain()
+            (activity as Question?)?.callDialog()
         }
 
 
