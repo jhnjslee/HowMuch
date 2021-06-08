@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">HowMuch</string>
+    <string name="app_id">com.bb.howmuch</string>
+    <string name="add_Id">ca-app-pub-1437428724660416~9281461941</string>
+    <!--    <string name="add_Id">ca-app-pub-3940256099942544~3347511713</string>-->
+    <string name="add_mobId">ca-app-pub-1437428724660416/2716053591</string>
+    <!--    <string name="add_mobId">ca-app-pub-3940256099942544/6300978111</string>-->
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="black100">FF000000</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

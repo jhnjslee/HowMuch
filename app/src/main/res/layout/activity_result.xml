@@ -10,10 +10,34 @@
         android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" android:fontFamily="@font/binggrae"
+        android:text="TextView"
+        android:fontFamily="@font/binggrae"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+<!--    ca-app-pub-1437428724660416~9281461941
+SDK를 통합하려면 배너 구현 가이드를 따르세요.
+다음 광고 단위 ID를 사용하여 코드를 통합할 때 광고 유형, 크기, 게재위치를 지정합니다.
+Howmuchbannerca-app-pub-1437428724660416/2716053591-->
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="431dp"
+        android:layout_height="76dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="@string/add_mobId"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.99">
+    </com.google.android.gms.ads.AdView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

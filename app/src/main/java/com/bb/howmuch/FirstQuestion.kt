@@ -1,10 +1,14 @@
 package com.bb.howmuch
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.RadioButton
+import android.widget.RadioGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 
 
@@ -23,6 +27,8 @@ class FirstQuestion : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
     lateinit var nextBtn : Button
+    private var result : Array<String> = arrayOf("","","")
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,11 +36,6 @@ class FirstQuestion : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-
-        // 화면 전환 프래그먼트 선언 및 초기 화면 설정
-        // 화면 전환 프래그먼트 선언 및 초기 화면 설정
-
-
     }
 
     override fun onCreateView(
@@ -44,26 +45,43 @@ class FirstQuestion : Fragment() {
         // Inflate the layout for this fragment
         val view : View = inflater.inflate(R.layout.fragment_first_question, container, false)
 
-        nextBtn = view.findViewById(R.id.next_btn)
-
-
-        nextBtn.setOnClickListener {
-            (activity as Question?)?.replaceFragment(SecondQuestion.newInstance(),"","")
+        val radioGroup1 = view.findViewById(R.id.rg1) as RadioGroup
+        radioGroup1.setOnCheckedChangeListener { group, checkedId ->
+            val radioButton = view.findViewById(checkedId) as RadioButton
+            result[0] = radioButton.text as String
+            Log.d("1", checkedId.toString() +" "+ radioButton.text)
         }
+        val radioGroup2 = view.findViewById(R.id.rg2) as RadioGroup
+        radioGroup2.setOnCheckedChangeListener { group, checkedId ->
+            val radioButton = view.findViewById(checkedId) as RadioButton
+            result[1] = radioButton.text as String
+            Log.d("1", checkedId.toString() +" "+ radioButton.text)
+        }
+        val radioGroup3 = view.findViewById(R.id.rg3) as RadioGroup
+        radioGroup3.setOnCheckedChangeListener { group, checkedId ->
+            val radioButton = view.findViewById(checkedId) as RadioButton
+            result[2] = radioButton.text as String
+            Log.d("1", checkedId.toString() +" "+ radioButton.text)
+        }
+
+
+        nextBtn = view.findViewById(R.id.next_btn)
+        nextBtn.setOnClickListener {
+            if (checkOk(result)){
+                (activity as Question?)?.replaceFragment(SecondQuestion.newInstance("", ""), "", "")
+            }else{
+                Toasty.error(yourContext, "This is an error toast.", Toast.LENGTH_SHORT, true).show();
+            }
+         }
 
         return view
     }
 
+    fun checkOk(array : Array<String>) : Boolean{
+        return array.contains("")
+    }
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment FirstQuestion.
-         */
-        // TODO: Rename and change types and number of parameters
+
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             FirstQuestion().apply {
