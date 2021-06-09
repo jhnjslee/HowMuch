@@ -57,6 +57,7 @@
         android:layout_height="46dp"
         android:layout_marginStart="124dp"
         android:layout_marginLeft="124dp"
+        android:layout_marginRight="124dp"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="24dp"
         android:background="@drawable/custom_alert_btn"

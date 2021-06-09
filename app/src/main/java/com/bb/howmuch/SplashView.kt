@@ -23,7 +23,7 @@ class SplashView : AppCompatActivity() {
             // This method will be executed once the timer is over
             // Start your app main activity
 
-            startActivity(Intent(this, Question::class.java))
+            startActivity(Intent(this, ReadyActivity::class.java))
 
             // close this activity
             finish()

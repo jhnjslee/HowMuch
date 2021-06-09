@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/binggrae_bold"
-        android:text='연애 심리 어플'
+        android:text='5가지 사랑의 언어 테스트'
         android:textColor="#ECECEC"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -28,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/binggrae_bold"
-        android:text="훙 리 "
+        android:text="H u n g l y"
         android:textColor="#ECECEC"
         android:textSize="15sp"
         android:textStyle="bold"
@@ -58,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="388dp"
         android:fontFamily="@font/binggrae_bold"
-        android:text='"나 얼마나 사랑해?"'
+        android:text='나 얼마나 사랑해?'
         android:textColor="#FFFFFF"
         android:textSize="45sp"
         android:textStyle="bold"

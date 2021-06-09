@@ -29,7 +29,7 @@ class PopUpActivity : AppCompatActivity() {
         lottie.loop(true)
         positiveButton = findViewById(R.id.positiveButton)
         message = findViewById(R.id.messageTextView)
-        setMessage("말로만 사랑한다고 하면 그건 사랑이 아니죠.\n 말보다 행동이 언제나 준비되어있어야 하지 않을까요?")
+        setMessage("말로만 사랑한다고 해서 사랑이면 그건 사랑이 아니죠.\n 말보다 행동이 언제나 준비되어 있어야 하지 않을까요? \n 동의하시나요?")
         positiveButton.setOnClickListener {
             okay()
         }

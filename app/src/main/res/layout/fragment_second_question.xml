@@ -20,7 +20,7 @@
             android:fontFamily="@font/binggrae_bold"
             android:text="1 / 8"
             android:gravity="center_horizontal"
-            android:textSize="22sp" />
+            android:textSize="21sp" />
 
         <TextView
             android:id="@+id/textView6"
@@ -31,11 +31,13 @@
             android:textColor="@color/black70"
             android:gravity="center_horizontal"
             android:text="나는 나를 인정하는 내용의 쪽지를 받기를 좋아한다."
-            android:textSize="22sp"/>
+            android:textSize="21sp"/>
 
         <RadioGroup
-            android:layout_width="match_parent"
+            android:id="@+id/rg1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:orientation="horizontal">
 
             <RadioButton
@@ -44,6 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginRight="10dp"
                 android:text="그렇다"
                 android:textSize="12sp" />
 
@@ -53,6 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginLeft="10dp"
                 android:text="그렇지 않다"
                 android:textSize="12sp" />
 
@@ -67,11 +71,14 @@
             android:textColor="@color/black70"
             android:gravity="center_horizontal"
             android:text="나는 안기는 것이 좋다."
-            android:textSize="22sp"/>
+            android:textSize="21sp"/>
 
         <RadioGroup
-            android:layout_width="match_parent"
+
+            android:id="@+id/rg2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:orientation="horizontal">
 
             <RadioButton
@@ -80,6 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginRight="10dp"
                 android:text="그렇다"
                 android:textSize="12sp" />
 
@@ -89,6 +97,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginLeft="10dp"
                 android:text="그렇지 않다"
                 android:textSize="12sp" />
 
@@ -103,11 +112,13 @@
             android:textColor="@color/black70"
             android:gravity="center_horizontal"
             android:text="둘만의 일대일 시간을 보내는 게 좋다."
-            android:textSize="22sp"/>
+            android:textSize="21sp"/>
 
         <RadioGroup
-            android:layout_width="match_parent"
+            android:id="@+id/rg3"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:orientation="horizontal">
 
             <RadioButton
@@ -116,6 +127,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginRight="10dp"
                 android:text="그렇다"
                 android:textSize="12sp" />
 
@@ -125,6 +137,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginLeft="10dp"
                 android:text="그렇지 않다"
                 android:textSize="12sp" />
 
@@ -139,11 +152,13 @@
             android:textColor="@color/black70"
             android:gravity="center_horizontal"
             android:text="실제적인 도움을 줄 떄 사랑 받는다고 느낀다."
-            android:textSize="22sp"/>
+            android:textSize="21sp"/>
 
         <RadioGroup
-            android:layout_width="match_parent"
+            android:id="@+id/rg4"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:orientation="horizontal">
 
             <RadioButton
@@ -152,6 +167,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginRight="10dp"
                 android:text="그렇다"
                 android:textSize="12sp" />
 
@@ -161,6 +177,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginLeft="10dp"
                 android:text="그렇지 않다"
                 android:textSize="12sp" />
 
@@ -175,11 +192,13 @@
             android:textColor="@color/black70"
             android:gravity="center_horizontal"
             android:text="당신에게 선물을 받는게 좋다."
-            android:textSize="22sp"/>
+            android:textSize="21sp"/>
 
         <RadioGroup
-            android:layout_width="match_parent"
+            android:id="@+id/rg5"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:orientation="horizontal">
 
             <RadioButton
@@ -188,6 +207,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginRight="10dp"
                 android:text="그렇다"
                 android:textSize="12sp" />
 
@@ -197,6 +217,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginLeft="10dp"
                 android:text="그렇지 않다"
                 android:textSize="12sp" />
 
@@ -211,11 +232,13 @@
             android:textColor="@color/black70"
             android:gravity="center_horizontal"
             android:text="당신과 함께 여유 있는 시간을 보내는 게 좋다."
-            android:textSize="22sp"/>
+            android:textSize="21sp"/>
 
         <RadioGroup
-            android:layout_width="match_parent"
+            android:id="@+id/rg6"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:orientation="horizontal">
 
             <RadioButton
@@ -224,6 +247,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginRight="10dp"
                 android:text="그렇다"
                 android:textSize="12sp" />
 
@@ -233,6 +257,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginLeft="10dp"
                 android:text="그렇지 않다"
                 android:textSize="12sp" />
 
@@ -247,11 +272,13 @@
             android:textColor="@color/black70"
             android:gravity="center_horizontal"
             android:text="당신이 나를 도와줄때 사랑받고 있다고 느낀다."
-            android:textSize="22sp"/>
+            android:textSize="21sp"/>
 
         <RadioGroup
-            android:layout_width="match_parent"
+            android:id="@+id/rg7"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:orientation="horizontal">
 
             <RadioButton
@@ -260,6 +287,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginRight="10dp"
                 android:text="그렇다"
                 android:textSize="12sp" />
 
@@ -269,6 +297,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginLeft="10dp"
                 android:text="그렇지 않다"
                 android:textSize="12sp" />
 
@@ -282,11 +311,13 @@
             android:textColor="@color/black70"
             android:gravity="center_horizontal"
             android:text="당신이 나를 포옹하거나 만질 때 사랑 받는다고 느낀다."
-            android:textSize="22sp"/>
+            android:textSize="21sp"/>
 
         <RadioGroup
-            android:layout_width="match_parent"
+            android:id="@+id/rg8"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:orientation="horizontal">
 
             <RadioButton
@@ -295,6 +326,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginRight="10dp"
                 android:text="그렇다"
                 android:textSize="12sp" />
 
@@ -304,6 +336,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginLeft="10dp"
                 android:text="그렇지 않다"
                 android:textSize="12sp" />
 

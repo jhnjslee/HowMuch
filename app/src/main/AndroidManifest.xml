@@ -6,16 +6,17 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:hardwareAccelerated="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".ReadyActivity"></activity>
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="@string/add_Id"/>
+            android:value="@string/add_Id" />
 
         <activity android:name=".SplashView">
             <intent-filter>
@@ -27,16 +28,15 @@
         <activity android:name=".Question">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
             </intent-filter>
         </activity>
         <activity
             android:name=".PopUpActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.Dialog.Alert"
-            android:screenOrientation="portrait" />
-        <activity android:name=".ResultActivity"
-            android:hardwareAccelerated="true"
-            />
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.Dialog.Alert" />
+        <activity
+            android:name=".ResultActivity"
+            android:hardwareAccelerated="true" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

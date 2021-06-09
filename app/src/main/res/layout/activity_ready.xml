@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FABFE4"
+    tools:context=".ReadyActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:background="#FFE3F5">
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="48dp"
+            android:fontFamily="@font/binggrae_bold"
+            android:gravity="center_horizontal"
+            android:text=" 최근 우후죽순 생기는 사랑 테스트를 보며 \n 사랑한다는걸 어떻게 표현해야할까 \n 고민하다 이 앱을 만들게 되었습니다. "
+            android:textColor="@color/black70"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_width="186dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="164dp"
+            android:background="@drawable/white_btn"
+            android:fontFamily="@font/binggrae_bold"
+            android:shadowColor="#000000"
+            android:shadowDy="12"
+            android:elevation="20dp"
+            android:text="테스트 시 작"
+            android:textColor="#FABFE4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.airbnb.lottie.LottieAnimationView
+
+            android:id="@+id/think"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView16"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.79"
+            app:lottie_fileName="thinking.json" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="52dp"
+            android:fontFamily="@font/binggrae_bold"
+            android:gravity="center_horizontal"
+            android:text="이 테스트는 게리 채프먼의 \n \'5가지 사랑의 언어\'를 \n 인용하여 만들었습니다. "
+            android:textColor="@color/black70"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/next_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
