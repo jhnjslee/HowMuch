@@ -11,9 +11,12 @@
         android:layout_height="match_parent"
         android:layout_margin="10dp"
         android:background="#FABFE4"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
 
-        <TextView
+
+    <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -46,7 +49,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginRight="10dp"
                 android:text="그렇다"
+                android:buttonTint="@color/white"
                 android:textSize="12sp" />
 
             <RadioButton
@@ -55,7 +60,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginLeft="10dp"
                 android:text="그렇지 않다"
+                android:buttonTint="@color/white"
                 android:textSize="12sp" />
 
         </RadioGroup>
@@ -84,7 +91,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginRight="10dp"
                 android:text="그렇다"
+                android:buttonTint="@color/white"
                 android:textSize="12sp" />
 
             <RadioButton
@@ -93,7 +102,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginLeft="10dp"
                 android:text="그렇지 않다"
+                android:buttonTint="@color/white"
                 android:textSize="12sp" />
 
         </RadioGroup>
@@ -122,7 +133,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginRight="10dp"
                 android:text="그렇다"
+                android:buttonTint="@color/white"
                 android:textSize="12sp" />
 
             <RadioButton
@@ -131,7 +144,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginLeft="10dp"
                 android:text="그렇지 않다"
+                android:buttonTint="@color/white"
                 android:textSize="12sp" />
 
         </RadioGroup>
@@ -160,7 +175,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginRight="10dp"
                 android:text="그렇다"
+                android:buttonTint="@color/white"
                 android:textSize="12sp" />
 
             <RadioButton
@@ -169,7 +186,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginLeft="10dp"
                 android:text="그렇지 않다"
+                android:buttonTint="@color/white"
                 android:textSize="12sp" />
 
         </RadioGroup>
@@ -199,7 +218,9 @@
                 android:layout_weight="0.20"
                 android:gravity="center"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginRight="10dp"
                 android:text="그렇다"
+                android:buttonTint="@color/white"
                 android:textSize="12sp" />
 
             <RadioButton
@@ -208,7 +229,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginLeft="10dp"
                 android:text="그렇지 않다"
+                android:buttonTint="@color/white"
                 android:textSize="12sp" />
 
         </RadioGroup>
@@ -237,7 +260,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginRight="10dp"
                 android:text="그렇다"
+                android:buttonTint="@color/white"
                 android:textSize="12sp" />
 
             <RadioButton
@@ -246,7 +271,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginLeft="10dp"
                 android:text="그렇지 않다"
+                android:buttonTint="@color/white"
                 android:textSize="12sp" />
 
         </RadioGroup>
@@ -275,7 +302,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginRight="10dp"
                 android:text="그렇다"
+                android:buttonTint="@color/white"
                 android:textSize="12sp" />
 
             <RadioButton
@@ -284,7 +313,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginLeft="10dp"
                 android:text="그렇지 않다"
+                android:buttonTint="@color/white"
                 android:textSize="12sp" />
 
         </RadioGroup>
@@ -313,7 +344,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginRight="10dp"
                 android:text="그렇다"
+                android:buttonTint="@color/white"
                 android:textSize="12sp" />
 
             <RadioButton
@@ -322,7 +355,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:fontFamily="@font/binggrae"
+                android:layout_marginLeft="10dp"
                 android:text="그렇지 않다"
+                android:buttonTint="@color/white"
                 android:textSize="12sp" />
 
         </RadioGroup>

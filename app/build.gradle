@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -31,6 +32,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    testOptions.unitTests{
+        includeAndroidResources = true
+    }
 }
 
 dependencies {
@@ -45,10 +49,14 @@ dependencies {
     implementation 'com.google.android.gms:play-services-ads:18.0.0'
 
     implementation 'com.github.GrenderG:Toasty:1.5.0'
+    implementation 'com.codemybrainsout.rating:ratingdialog:1.0.8'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+//    testImplementation "androidx.test.ext:junit-ktx:$androidXTestExtKotlinRunnerVersion"
+//    testImplementation "androidx.test:core-ktx:$androidXTestCoreVersion"
+//    testImplementation "org.robolectric:robolectric:$robolectricVersion"
 
 
 

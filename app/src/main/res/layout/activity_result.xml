@@ -14,6 +14,7 @@
     Howmuchbannerca-app-pub-1437428724660416/2716053591-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/resultConstraint"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="20dp"
@@ -33,8 +34,8 @@
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="254dp"
-            android:layout_height="179dp"
-            android:layout_marginBottom="84dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/textView18"
             app:layout_constraintEnd_toEndOf="parent"
@@ -44,33 +45,49 @@
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:layout_height="200dp"
+                tools:srcCompat="@drawable/ic_hug" />
 
             <TextView
                 android:id="@+id/textView17"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/binggrae"
                 android:gravity="center_horizontal"
-                android:text="TextView"
-                android:textColor="@color/black70" />
+                android:text="당신의 제 1 사랑의 언어는"
+                android:textColor="@color/black50"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textView19"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/binggrae_bold"
                 android:gravity="center_horizontal"
                 android:text="TextView"
-                android:textColor="@color/black70" />
+                android:textColor="@color/black70"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:fontFamily="@font/binggrae_bold"
+                android:text="내용 보기"
+
+                android:textColor="#8BC8FF" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/textView12"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/binggrae_bold"
             android:gravity="center_horizontal"
             android:text="테스트 결과"
             android:textColor="@color/black70"
+            android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -79,33 +96,86 @@
         <LinearLayout
             android:id="@+id/linearLayout3"
             android:layout_width="331dp"
-            android:layout_height="39dp"
+            android:layout_height="50dp"
             android:layout_marginBottom="24dp"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/adView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Button" />
+                <ImageButton
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#00FFFFFF"
+                    android:src="@android:drawable/ic_menu_search"
+                    android:text="Button"
+                    app:tint="#FF4D4D" />
 
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                <ImageButton
+                    android:id="@+id/button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#00FFFFFF"
+                    android:src="@android:drawable/ic_menu_share"
+                    android:text="Button"
+                    app:tint="#FF4D4D" />
+
+                <ImageButton
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#00FFFFFF"
+                    android:src="@android:drawable/ic_menu_send"
+                    android:text="Button"
+                    app:tint="#FF4D4D" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/binggrae"
+                    android:gravity="center"
+                    android:text="다른 결과 보기"
+                    android:textColor="#8BC8FF" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/binggrae"
+                    android:gravity="center"
+                    android:text="내용 복사"
+                    android:textColor="#8BC8FF" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/binggrae"
+                    android:gravity="center"
+                    android:text="앱 평가하기"
+                    android:textColor="#8BC8FF" />
+            </LinearLayout>
         </LinearLayout>
 
         <com.google.android.gms.ads.AdView
@@ -124,51 +194,49 @@
             android:id="@+id/linearLayout2"
             android:layout_width="242dp"
             android:layout_height="115dp"
-            android:layout_marginBottom="36dp"
+            android:layout_marginBottom="28dp"
             android:background="@drawable/white_btn"
             android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent">
 
             <TextView
                 android:id="@+id/textView20"
                 android:layout_width="match_parent"
-                android:layout_height="115dp"
+                android:layout_height="90dp"
                 android:gravity="center|center_horizontal"
                 android:text="90점"
                 android:textColor="@color/black70"
-                android:textSize="80sp"
+                android:textSize="70sp"
                 tools:layout_editor_absoluteX="83dp"
                 tools:layout_editor_absoluteY="363dp" />
-        </LinearLayout>
 
-        <TextView
-            android:id="@+id/result"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/binggrae"
-            android:text="TextView"
-            android:textColor="@color/black70"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.796"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.443" />
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:text="말로만 사랑한다고...하시는건 아니죠?"
+                android:textColor="@color/black70"
+                android:textSize="14sp" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/textView18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/binggrae_bold"
             android:text="사랑 행동력"
             android:textColor="@color/black70"
+            android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

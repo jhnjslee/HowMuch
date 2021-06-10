@@ -3,7 +3,6 @@
     package="com.bb.howmuch">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="true"
@@ -12,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".ReadyActivity"></activity>
+        <activity android:name=".AnotherResult" android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.Dialog.Alert"/>
+        <activity android:name=".ResultPopup" android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.Dialog.Alert"/>
+        <activity android:name=".ReadyActivity" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"

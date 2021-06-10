@@ -135,32 +135,32 @@ class EighthQuestion : Fragment() {
                 }}
                 2->{when(it){
                     "그렇다"->{
-                        ResultActivity.addPointC(1)
+                        ResultActivity.addPointD(1)
                     }
                 }}
                 3->{when(it){
                     "그렇다"->{
-                        ResultActivity.addPointD(1)
+                        ResultActivity.addPointB(1)
                     }
                 }}
                 4->{when(it){
                     "그렇다"->{
-                        ResultActivity.addPointB(1)
+                        ResultActivity.addPointE(1)
                     }
                 }}
                 5->{when(it){
                     "그렇다"->{
-                        ResultActivity.addPointE(1)
+                        ResultActivity.addPointC(1)
                     }
                 }}
                 6->{when(it){
                     "그렇다"->{
-                        ResultActivity.addPointC(1)
+                        ResultActivity.addPointA(1)
                     }
                 }}
                 7->{when(it){
                     "그렇다"->{
-                        ResultActivity.addPointA(1)
+                        ResultActivity.addPointB(1)
                     }
                 }}
             }

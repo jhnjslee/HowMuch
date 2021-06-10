@@ -2,15 +2,20 @@ package com.bb.howmuch
 
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import android.widget.DatePicker.OnDateChangedListener
 import androidx.fragment.app.Fragment
 import es.dmoral.toasty.Toasty
+import kotlinx.android.synthetic.main.fragment_first_question.*
 import java.util.*
 
 
@@ -30,11 +35,12 @@ class FirstQuestion : Fragment() {
     private var param2: String? = null
     lateinit var numberPicker1 : NumberPicker
     lateinit var numberPicker2 : NumberPicker
-    lateinit var spinner1 : Spinner
 
+    lateinit var nameText : TextView
     lateinit var mContext : Context
     lateinit var nextBtn : Button
-    private var result : Array<String> = arrayOf("", "", "","","")
+    lateinit var button5 : Button
+    private var result : Array<String> = arrayOf("", "", "", "", "","")
     // 사용자 성별, 상대방 성별, 관계 , 생년월일 , 생년월일
 
 
@@ -97,17 +103,38 @@ class FirstQuestion : Fragment() {
             result[4] = i2.toString()
         }
 
+        nameText = view.findViewById(R.id.nameText)
+        nameText.addTextChangedListener(watcher)
+
 
         nextBtn = view.findViewById(R.id.next_btn)
+        button5 = view.findViewById(R.id.button5)
         nextBtn.setOnClickListener {
             if (checkOk(result)){
+                ResultActivity.a = 0
+                ResultActivity.b = 0
+                ResultActivity.c = 0
+                ResultActivity.d = 0
+                ResultActivity.e = 0
+                MainActivity.mainCount = 0
+                ResultActivity.setInfo("")
+                Log.d("r",result[5])
                 (activity as Question?)?.replaceFragment(SecondQuestion.newInstance("", ""), "", "")
-                ResultActivity.setInfo(result[0]+"$$"+result[1]+"$$"+result[2]+"$$"+result[3]+"$$"+result[4])
-            }else{
+                ResultActivity.setInfo(result[0] + "$$" + result[1] + "$$" + result[2] + "$$" + result[3] + "$$" + result[4] + "$$" + result[5])
+            }
+            else{
                 //Toasty
-                Toasty.warning(mContext, "모든 사항을 체크해 주세요", Toast.LENGTH_SHORT, true).show();
+                Toasty.warning(mContext, "모든 사항을 입력해 주세요", Toast.LENGTH_SHORT, true).show();
             }
          }
+
+        button5.setOnClickListener {
+            val mHandler = Handler(Looper.getMainLooper())
+            mHandler.postDelayed({
+                val intent = Intent(mContext, ResultActivity::class.java)
+                startActivity(intent)
+            }, 0)
+        }
 
         return view
     }
@@ -125,5 +152,12 @@ class FirstQuestion : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+    val watcher: TextWatcher = object : TextWatcher {
+        override fun afterTextChanged(s: Editable) {}
+        override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
+        override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+            result[5] = s.toString()
+        }
     }
 }
