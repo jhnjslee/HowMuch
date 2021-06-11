@@ -31,6 +31,7 @@ class ResultActivity : AppCompatActivity() {
     lateinit var resultTitle : TextView
     lateinit var resultContents : TextView
     lateinit var mainScore : TextView
+    lateinit var mainScoreText : TextView
 
 
     companion object {
@@ -81,11 +82,43 @@ class ResultActivity : AppCompatActivity() {
         resultTitle = findViewById(R.id.textView17)
         resultContents = findViewById(R.id.textView19)
         mainScore = findViewById(R.id.textView20)
+        mainScoreText = findViewById(R.id.textView25)
         ask = getResources().getDrawable(R.drawable.ic_couple)
+
+
+        val ratingDialog: RatingDialog = RatingDialog.Builder(this)
+                .icon(ask)
+                .session(7)
+                .threshold(3f)
+                .title("앱에 대한 평가를 부탁드려도 될까요?")
+                .titleTextColor(R.color.black)
+                .positiveButtonText("지금 안할래요")
+                .negativeButtonText("싫어요")
+                .positiveButtonTextColor(R.color.white)
+                .negativeButtonTextColor(R.color.grey_500)
+                .formTitle("앱 평가 하기")
+                .formHint("당신의 생각이 듣고 싶어요")
+                .formSubmitText("등록")
+                .formCancelText("취소")
+                .ratingBarColor(R.color.purple_200)
+                .playstoreUrl("YOUR_URL")
+                .onThresholdCleared { ratingDialog, rating, thresholdCleared -> //do something
+                    ratingDialog.dismiss()
+                }
+                .onThresholdFailed { ratingDialog, rating, thresholdCleared -> //do something
+                    ratingDialog.dismiss()
+                }
+                .onRatingChanged { rating, thresholdCleared -> }
+                .onRatingBarFormSumbit { }.build()
+
         val str = personalInfo
         val arr = str.split("$$")
-
         val mm = mutableMapOf("a" to a, "b" to b, "c" to c, "d" to d, "e" to e)
+        MobileAds.initialize(this)
+        mAdView = findViewById(R.id.adView)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
+
         var sortedByValue = mm.toList().sortedWith(compareByDescending({ it.second })).toMap()
 
         when (sortedByValue.keys.first()){
@@ -122,7 +155,28 @@ class ResultActivity : AppCompatActivity() {
         }
         // 다른 결과 보기
         button2.setOnClickListener {
-
+            var count = 0
+            sortedByValue.keys.forEach {
+            when (count){
+                0->{
+                    AnotherResult.titles[0] = it
+                    AnotherResult.values[0] = sortedByValue.get(it)!!
+                }
+                1->{
+                    AnotherResult.titles[1] = it
+                    AnotherResult.values[1] = sortedByValue.get(it)!!
+                }
+                2->{
+                    AnotherResult.titles[2] = it
+                    AnotherResult.values[2] = sortedByValue.get(it)!!
+                }
+                3->{
+                    AnotherResult.titles[3] = it
+                    AnotherResult.values[3] = sortedByValue.get(it)!!
+                }
+            }
+            count++
+           }
 
             val mHandler = Handler(Looper.getMainLooper())
             mHandler.postDelayed({
@@ -171,31 +225,6 @@ class ResultActivity : AppCompatActivity() {
         //앱 평가하기
         button.setOnClickListener {
             Log.d("v평가","rate")
-            val ratingDialog: RatingDialog = RatingDialog.Builder(this)
-                .icon(ask)
-                .session(7)
-                .threshold(3f)
-                .title("앱에 대한 평가를 부탁드려도 될까요?")
-                .titleTextColor(R.color.black)
-                .positiveButtonText("지금 안할래요")
-                .negativeButtonText("싫어요")
-                .positiveButtonTextColor(R.color.white)
-                .negativeButtonTextColor(R.color.grey_500)
-                .formTitle("앱 평가 하기")
-                .formHint("당신의 생각이 듣고 싶어요")
-                .formSubmitText("등록")
-                .formCancelText("취소")
-                .ratingBarColor(R.color.purple_200)
-                .playstoreUrl("YOUR_URL")
-                .onThresholdCleared { ratingDialog, rating, thresholdCleared -> //do something
-                    ratingDialog.dismiss()
-                }
-                .onThresholdFailed { ratingDialog, rating, thresholdCleared -> //do something
-                    ratingDialog.dismiss()
-                }
-                .onRatingChanged { rating, thresholdCleared -> }
-                .onRatingBarFormSumbit { }.build()
-
 
             ratingDialog.show()
         }
@@ -209,18 +238,42 @@ class ResultActivity : AppCompatActivity() {
             }, 0)
         }
 
-        MobileAds.initialize(this)
-        mAdView = findViewById(R.id.adView)
-        val adRequest = AdRequest.Builder().build()
-        mAdView.loadAd(adRequest)
-        if (MainActivity.mainCount < 10) {
 
-        } else {
-
-        }
 
         mainScore.text = MainActivity.mainCount.toString()+"점"
+        when (MainActivity.mainCount) {
+            in 0..11 -> {
+                mainScoreText.text = " 분명 사랑하는 만큼 눌러달라고 했는데... "
+            }
+            in 10..21 -> {
+                mainScoreText.text = " 현재 가장 해명이 필요한 사람 "
+            }
+            in 20..31 -> {
+                mainScoreText.text = " 말은 굉장히 잘하는 사람 "
+            }
+            in 30..41 -> {
+                mainScoreText.text = " 노력은 하지만 착하고 겁이 많은 사람 "
+            }
+            in 40..51 -> {
+                mainScoreText.text = " 할만큼만 최선을 다하는 사람 "
+            }
+            in 50..61 -> {
+                mainScoreText.text = " 사랑에있어 언행일치가 되는 사람  "
+            }
+            in 60..71 -> {
+                mainScoreText.text = " 당신을 위해 핸드폰도 버릴 수 있는 사람 "
+            }
+            in 70..81 -> {
+                mainScoreText.text = " 무엇이든 할 수 있지만 손가락이 약간 느린 사람 "
+            }
+            in 90..101 -> {
+                mainScoreText.text = " 당신을 위해 무엇이든 할 수 있는 사람 "
+            }
+            in 100..999999 -> {
+                mainScoreText.text = " 어떠한 상황이 발생해도 뚝심있는 사람 "
+            }
 
+        }
 
         mAdView.adListener = object : AdListener() {
             override fun onAdLoaded() {

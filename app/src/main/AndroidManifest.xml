@@ -15,20 +15,23 @@
             android:theme="@style/Theme.AppCompat.DayNight.Dialog.Alert"/>
         <activity android:name=".ResultPopup" android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.DayNight.Dialog.Alert"/>
-        <activity android:name=".ReadyActivity" />
+        <activity android:name=".ReadyActivity"
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="@string/add_Id" />
 
-        <activity android:name=".SplashView">
+        <activity android:name=".SplashView"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Question">
+        <activity android:name=".Question"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -39,6 +42,7 @@
             android:theme="@style/Theme.AppCompat.DayNight.Dialog.Alert" />
         <activity
             android:name=".ResultActivity"
+            android:screenOrientation="portrait"
             android:hardwareAccelerated="true" />
         <activity android:name=".MainActivity">
             <intent-filter>

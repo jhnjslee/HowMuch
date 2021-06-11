@@ -108,7 +108,6 @@ class FirstQuestion : Fragment() {
 
 
         nextBtn = view.findViewById(R.id.next_btn)
-        button5 = view.findViewById(R.id.button5)
         nextBtn.setOnClickListener {
             if (checkOk(result)){
                 ResultActivity.a = 0
@@ -128,13 +127,14 @@ class FirstQuestion : Fragment() {
             }
          }
 
-        button5.setOnClickListener {
-            val mHandler = Handler(Looper.getMainLooper())
-            mHandler.postDelayed({
-                val intent = Intent(mContext, ResultActivity::class.java)
-                startActivity(intent)
-            }, 0)
-        }
+//        button5 = view.findViewById(R.id.button5)
+//        button5.setOnClickListener {
+//            val mHandler = Handler(Looper.getMainLooper())
+//            mHandler.postDelayed({
+//                val intent = Intent(mContext, MainActivity::class.java)
+//                startActivity(intent)
+//            }, 0)
+//        }
 
         return view
     }

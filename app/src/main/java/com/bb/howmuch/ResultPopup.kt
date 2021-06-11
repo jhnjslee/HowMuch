@@ -3,6 +3,7 @@ package com.bb.howmuch
 import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Window
 import android.view.WindowManager
 import kotlinx.android.synthetic.main.activity_result_popup.*
 import kotlinx.android.synthetic.main.activity_result_popup.view.*
@@ -17,6 +18,7 @@ class ResultPopup : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_result_popup)
 

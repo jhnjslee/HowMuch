@@ -4,20 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#51FFFFFF"
+    android:background="#000000"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="415dp"
-        android:layout_height="430dp"
-        android:baselineAlignBottom="false"
-        android:elevation="2dp"
+    <TextView
+        android:id="@+id/dosError"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#0022FF"
+        android:text="Abort, Retry, Fail? - Usually you will get this error message if you are trying to read a disk that is not readable of if no disk is in there   Access denied - Usually meaning the file has a attribute on it read only or the disk is write protected *TIP* if you need to delete the file just deltree FILE   Bad command or file name - Usually this is when you miss type a command or if DOS does not know the command.   Bad or missing command interpreter - DOS cannot locate the Command.com a important file that holds all of DOS's needed information, you will need to recopy it also there is a chance you could possible have a Virus   Cannot find a device that may be needed to run windows- Make sure the path in your AUTOEXEC.BAT points to the directory that contains the file and that it exists on your hard drive  . Cannot find system files - DOS cannot find your system files   Directory already exists - You tried to create a directory with the same name   Disk Full - Message that comes when you to try to copy to a diskette that is full to capacity   Divide overflow - Program has attempted to divide something by 0.   Drive A: Does not exist - This message occurs when you have a dirty diskette   Drive not ready error - Disk in the drive is not readable, such as a disk not being in the disk drive   Duplicate file name or file not found - When attempting to rename a file the file does not exist or there is already a file with that name.   File cannot be copied onto itself - An attempt to copy a file could not be completed because the file already exists or same source and destination.   File creation error - Directory could be full because of the DOS limitation of files in one directory the file could also already exist or the file was not copied correctly   File exists - You're trying to name your new file with a name that's already in use   File not found - Meaning that in the directory that you searched does not have that certain file or there are no files in the directory.   General Failure - Something bad has occurred and DOS not know what to say so it just gives you this error if this is giving when try reading the Hard drive you may need to format the hard drive or it possible even could be bad   Help hot available for this command - No help is found with your command   Incorrect DOS version - You cannot run your current DOS program because its not the correct DOS version load SETVER at your CONFIG.SYS to solve this problem   Insert System Disk - Insert your bootable diskette into a diskette drive   Insufficient disk space - Disk is full or if you are trying to copy a file to a disk the file is too big to fit on the disk.  Insufficient memory - You don't have enough memory to run a particular command or applications   Internal stack overflow - DOS's internal storage areas are full if you need to go into your config.sys and increase the STACKS=0,0   Invalid directory - Directory is invalid or does not exist in the directory you are currently in.   Invalid drive specification - Drive does not exist on the computer or cannot be found.   Invalid file name or file not found - DOS couldn't find the file specified in the current directory or the file has an invalid character in it.   Invalid media, track 0 bad or unusable - Format command cannot format the specified disk or the disk capacity is invalid, or bad disk.   Invalid number of parameters - When the command was typed something was left out that DOS needed by the command, mistyped the command. Or put a space where one was not needed.   Invalid parameter - Typed a command correctly but specified the incorrect parameter such as format /z  "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/brokenwindow" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/blackView"
@@ -34,11 +33,25 @@
         android:layout_width="152dp"
         android:layout_height="36dp"
         android:fontFamily="@font/binggrae"
+        android:gravity="center_horizontal"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <com.airbnb.lottie.LottieAnimationView
+
+        android:id="@+id/countdown"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_fileName="countDown.json"
+
+        />
 
     <com.airbnb.lottie.LottieAnimationView
 
@@ -50,16 +63,16 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:lottie_fileName="heart_beat_pop_up.json"
 
-        />
+        app:lottie_fileName="heart_beat_pop_up.json" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/binggrae"
-        android:text="TextView"
+        android:gravity="center_horizontal"
+        android:text="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

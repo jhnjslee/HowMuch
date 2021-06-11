@@ -6,6 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import android.view.MotionEvent
 import android.view.View
+import android.view.Window
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.TextView
@@ -22,6 +23,7 @@ class PopUpActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.custom_dialog)
         val lottie = findViewById<View>(R.id.heart_hand) as LottieAnimationView
@@ -29,7 +31,7 @@ class PopUpActivity : AppCompatActivity() {
         lottie.loop(true)
         positiveButton = findViewById(R.id.positiveButton)
         message = findViewById(R.id.messageTextView)
-        setMessage("말보다 행동이 언제나 준비되어 있어야 하지 않을까요? \n 동의하시나요?")
+        setMessage("사랑은 말보다 행동이 언제나 준비되어 있어야 하지 않을까요? \n 동의하시나요? ")
         positiveButton.setOnClickListener {
             okay()
         }

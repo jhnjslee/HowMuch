@@ -33,7 +33,7 @@
     <TextView
         android:id="@+id/messageTextView"
         android:layout_width="0dp"
-        android:layout_height="200dp"
+        android:layout_height="100dp"
         android:background="@color/white"
         android:fontFamily="@font/binggrae_bold"
         android:gravity="center"

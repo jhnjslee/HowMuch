@@ -33,7 +33,7 @@
 
         <LinearLayout
             android:id="@+id/linearLayout"
-            android:layout_width="254dp"
+            android:layout_width="270dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
             android:orientation="vertical"
@@ -45,13 +45,15 @@
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="170dp"
                 tools:srcCompat="@drawable/ic_hug" />
 
             <TextView
                 android:id="@+id/textView17"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:fontFamily="@font/binggrae"
                 android:gravity="center_horizontal"
                 android:text="당신의 제 1 사랑의 언어는"
@@ -96,7 +98,7 @@
         <LinearLayout
             android:id="@+id/linearLayout3"
             android:layout_width="331dp"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
             android:layout_marginBottom="24dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/adView"
@@ -105,14 +107,14 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="40dp"
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
                 <ImageButton
                     android:id="@+id/button2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_weight="1"
                     android:background="#00FFFFFF"
                     android:src="@android:drawable/ic_menu_search"
@@ -122,7 +124,7 @@
                 <ImageButton
                     android:id="@+id/button3"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_weight="1"
                     android:background="#00FFFFFF"
                     android:src="@android:drawable/ic_menu_share"
@@ -132,7 +134,7 @@
                 <ImageButton
                     android:id="@+id/button"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_weight="1"
                     android:background="#00FFFFFF"
                     android:src="@android:drawable/ic_menu_send"
@@ -142,7 +144,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="20dp"
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
@@ -217,8 +219,8 @@
                 android:id="@+id/textView25"
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
+                android:fontFamily="@font/binggrae"
                 android:gravity="center"
-                android:text="말로만 사랑한다고...하시는건 아니죠?"
                 android:textColor="@color/black70"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -229,7 +231,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:fontFamily="@font/binggrae_bold"
-            android:text="사랑 행동력"
+            android:text="언행일치 점수"
             android:textColor="@color/black70"
             android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout2"

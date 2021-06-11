@@ -28,7 +28,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/binggrae_bold"
-        android:text="H u n g l y"
+        android:gravity="center_horizontal"
+        android:text="H u n g l y\n1.0.0"
         android:textColor="#ECECEC"
         android:textSize="15sp"
         android:textStyle="bold"
@@ -66,12 +67,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>
