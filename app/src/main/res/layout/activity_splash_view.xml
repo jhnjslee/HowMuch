@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/binggrae_bold"
         android:gravity="center_horizontal"
-        android:text="H u n g l y\n1.0.0"
+        android:text="H u n g l y\n1.0.1"
         android:textColor="#ECECEC"
         android:textSize="15sp"
         android:textStyle="bold"

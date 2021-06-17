@@ -161,7 +161,7 @@
             android:fontFamily="@font/binggrae_bold"
             android:textColor="@color/black70"
             android:gravity="center_horizontal"
-            android:text="실제적인 도움을 줄 떄 사랑 받는다고 느낀다."
+            android:text="실제적인 도움을 줄 때 사랑 받는다고 느낀다."
             android:textSize="21sp"/>
 
         <RadioGroup

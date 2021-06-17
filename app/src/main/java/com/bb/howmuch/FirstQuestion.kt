@@ -3,6 +3,8 @@ package com.bb.howmuch
 
 import android.content.Context
 import android.content.Intent
+import android.media.AudioManager
+import android.media.ToneGenerator
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -14,8 +16,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
+import com.codemybrainsout.ratingdialog.RatingDialog
+import com.google.android.play.core.review.ReviewManagerFactory
+import com.google.android.play.core.review.model.ReviewErrorCode
 import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.fragment_first_question.*
+import java.sql.Connection
+import java.sql.DriverManager
+import java.sql.SQLException
 import java.util.*
 
 
@@ -65,6 +73,9 @@ class FirstQuestion : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view : View = inflater.inflate(R.layout.fragment_first_question, container, false)
+
+        var ask = getResources().getDrawable(R.drawable.ic_couple)
+
 
         val radioGroup1 = view.findViewById(R.id.rg1) as RadioGroup
         radioGroup1.setOnCheckedChangeListener { group, checkedId ->
@@ -127,12 +138,45 @@ class FirstQuestion : Fragment() {
             }
          }
 
+
+
 //        button5 = view.findViewById(R.id.button5)
 //        button5.setOnClickListener {
+//
 //            val mHandler = Handler(Looper.getMainLooper())
 //            mHandler.postDelayed({
-//                val intent = Intent(mContext, MainActivity::class.java)
-//                startActivity(intent)
+//                val ratingDialog: RatingDialog = RatingDialog.Builder(mContext)
+//                    .icon(ask)
+////                    .session(7)
+////                    .threshold(4f)
+//                    .title("앱에 대한 평가를 부탁드려도 될까요?")
+//                    .titleTextColor(R.color.black)
+//                    .positiveButtonText("지금 안할래요")
+//                    .negativeButtonText("싫어요")
+//                    .positiveButtonTextColor(R.color.black)
+//                    .negativeButtonTextColor(R.color.black)
+//                    .formTitle("앱 평가 하기")
+//                    .formHint("당신의 생각이 듣고 싶어요")
+//                    .formSubmitText("등록")
+//                    .formCancelText("취소")
+//                    .ratingBarColor(R.color.purple_200)
+//                    .playstoreUrl("https://play.google.com/store/apps/details?id=com.bb.howmuch")
+//                    .onThresholdCleared { ratingDialog, rating, thresholdCleared -> //do something
+//                        Log.d("threads","onThresholdCleared ${ratingDialog}, ${rating} ${thresholdCleared}")
+////                        ratingDialog.dismiss()
+//                    }
+//                    .onThresholdFailed { ratingDialog, rating, thresholdCleared -> //do something
+////                        ratingDialog.dismiss()
+//                        Log.d("threads","onThresholdFailed ${ratingDialog}, ${rating} ${thresholdCleared}")
+//                    }
+//                    .onRatingChanged { rating, thresholdCleared ->
+//                        Log.d("threads","onRatingChanged ${rating} ${thresholdCleared}")
+//
+//                    }
+//                    .onRatingBarFormSumbit {  Log.d("threads","onRatingBarFormSumbit") }.build()
+//
+//                ratingDialog.show()
+//
 //            }, 0)
 //        }
 
@@ -142,6 +186,47 @@ class FirstQuestion : Fragment() {
     fun checkOk(array: Array<String>) : Boolean{
         return !array.contains("")
     }
+
+
+    fun dbConnection(){
+        Thread(Runnable {
+            var oracon: Connection? = null
+            try {
+                Class.forName("oracle.jdbc.driver.OracleDriver")
+                DriverManager.setLoginTimeout(1) //접속 제한 시간 설정 : 초 단위
+                oracon = DriverManager.getConnection("jdbc:oracle:thin:@domain:port:orcl", "SYS", "root")
+                try {
+                    val sql: String
+//
+//                    sql = "update table set column1=?,column2=? where pk=?"
+//                    val prest = oracon!!.prepareStatement(sql)
+//                    prest.setString(1,column1)
+//                    prest.setString(2,column2)
+//                    prest.setString(3,pk)
+//                    val r = prest.executeQuery()
+//                    prest.close()
+//                    oracon.close()
+//
+//                    println("oralce ok : "+text)
+                }
+                catch (s: SQLException) {
+                    println("Oracle statement is not executed! : "+s.message)
+//                    Handler(Looper.getMainLooper()).post { //Thread 안에서 Toast 접근하는 방법
+//                        Toast.makeText(this, "Oracle statement is not executed! : "+s.message, Toast.LENGTH_LONG).show()
+//                        val toneGen1 = ToneGenerator(AudioManager.STREAM_MUSIC, 100) //소리 재생도 Thread 안에서는 Handler를 통해서 해야 한다.
+//                        toneGen1.startTone(ToneGenerator.TONE_CDMA_ABBR_ALERT, 300)
+//                    }
+                }
+            }
+            catch (e: Exception) {
+                e.printStackTrace()
+                println("Oracle Connection Error! : "+e.message)
+            }
+        }).start()
+
+    }
+
+
     companion object {
 
         @JvmStatic
